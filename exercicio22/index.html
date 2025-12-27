@@ -3,12 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>teste</title>
+    <title>soma</title>
 </head>
 <body>
-    <iframe src="index.html" frameborder="0" referrerpolicy="no-ferrer" sandbox="sandbox"></iframe>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae accusantium harum aperiam optio vero quia, nam, odio facere alias voluptatibus consectetur corporis itaque eveniet, obcaecati mollitia unde et ullam eum?Lorem ipsum dolor sit amet consectetur adipisicing elit. In vel, dolore maiores exercitationem iure itaque tempore, harum, praesentium possimus ex suscipit eveniet esse provident magni officia? Dolore deserunt delectus molestiae!Loreml
         
-    </p>
+    <h1>Soma de numeros do formulario</h1>
+    <form action="cadastro.php" method="post">
+        <p><label for="in1">Primeiro Numero</label>
+            <input type="number" name="n1" id="in1" min="0"
+            max="50" value="0" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+        <p><label for="in2">Segundo Numero</label>
+            <input type="number" name="n2" id="in2"min="0"
+            max="50" value="0" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+        <p>
+           <label for="isoma">Soma: </label>
+           <output name="soma" id="isoma">0</output>  
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
 </body>
 </html>
